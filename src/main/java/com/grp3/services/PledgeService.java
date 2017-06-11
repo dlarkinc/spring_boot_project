@@ -25,10 +25,10 @@ public class PledgeService implements IPledgeService {
 
 	@Override
 	public void cancelPledges(List<Pledge> pledges) {
-		pledges.forEach(pledge -> {
+		for (Pledge pledge : pledges) {
 			cancelPledge(pledge);
 			_pledgeRepo.save(pledge);
-		});
+		};
 		
 	}
 
