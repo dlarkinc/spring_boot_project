@@ -70,13 +70,13 @@ public class FileSystemStorageService implements IStorageService {
 
 	@Override
 	public Stream<Path> loadAll() {
-        try {
-            return Files.walk(this._rootLocation, 1)
-                    .filter(path -> !path.equals(this._rootLocation))
-                    .map(path -> this._rootLocation.relativize(path));
-        } catch (IOException e) {
-            throw new StorageException(EXC_READ_FILES_FAIL, e);
-        }
+        //try {
+         //   return Files.walk(this._rootLocation, 1)
+          //          .filter(path -> !path.equals(this._rootLocation))
+           //         .map(path -> this._rootLocation.relativize(path));
+        //} catch (IOException e) {
+          //  throw new StorageException(EXC_READ_FILES_FAIL, e);
+        //}
 	}
 
 	@Override
